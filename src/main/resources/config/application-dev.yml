@@ -42,7 +42,8 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:./build/h2db/db/yezarupa;DB_CLOSE_DELAY=-1
+    #url: jdbc:h2:file:./build/h2db/db/yezarupa;DB_CLOSE_DELAY=-1
+    url: jdbc:postgresql://localhost:5432/yezarupa
     username: yezarupa
     password:
     hikari:
@@ -60,6 +61,8 @@ spring:
       hibernate.cache.use_query_cache: false
       hibernate.generate_statistics: false
   data:
+    jest:
+      uri: http://localhost:9200
     elasticsearch:
       properties:
         path:
